@@ -17,7 +17,7 @@ The project followed a structured data pipeline to ensure data integrity and ana
 * **Quality Control:** Handled missing rows (~3.11%) caused by non-synchronized international trading holidays between US and Indian markets by applying Missing Completely At Random (MCAR < 5%) removal rules without introducing bias.
 
 ### Data Transformation
-* **Feature Engineering:** Converted international 24-Karat COMEX pricing quoted in USD per Troy Ounce into domestic retail metrics (INR per gram, 22-Karat purity) using the formula:
+* **Feature Engineering:** Converted international 24-Karat COMEX pricing quoted in USD per Troy Ounce into domestic retail metrics (INR per gram, 22 Karat purity) using the formula:
   $$\text{Gold Price (INR/g)} = \left(\frac{\text{Gold\_USD\_oz}}{31.1034768}\right) \times \text{USD\_INR} \times \left(\frac{22}{24}\right)$$
 * **Feature Scaling:** Applied `StandardScaler` to normalize the input feature distribution while isolating scaling strictly to training splits to prevent data leakage.
 
